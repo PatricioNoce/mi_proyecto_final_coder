@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ejemplo.views import imc, index, index_dos, index_tres
+from ejemplo.views import imc, index, index_dos, index_tres, monstrar_familiares
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,5 @@ urlpatterns = [
     path('saludar/<nombre>/<apellido>', index_dos),
     path('mostrar-notas/', index_tres),
     path('calcular-imc/<peso>/<altura>', imc),
+    path('mi-familia/', monstrar_familiares),
 ]
